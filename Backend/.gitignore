@@ -1,0 +1,52 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+.env
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# =========================
+# Node / React (frontend)
+# =========================
+node_modules/
+frontend/node_modules/
+
+# Build output
+frontend/build/
+frontend/dist/
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# =========================
+# OS generated files
+# =========================
+.DS_Store
+Thumbs.db
+
