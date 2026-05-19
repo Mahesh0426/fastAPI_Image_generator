@@ -1,5 +1,5 @@
 from sqlmodel import SQLModel, create_engine, Session
-from .models import Job, Thumbnail
+from models import Job, Thumbnail  # noqa: F401  (registers tables on metadata)
 from config import DATABASE_URL
 
 # Create the database engine using the DATABASE_URL from config

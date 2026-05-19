@@ -4,7 +4,7 @@ from sqlmodel import Session, select
 from database import engine
 from models import Job, Thumbnail
 from services.openai_service import generate_thumbnail
-from services.imagekit_services import upload_image
+from services.imagekit_services import upload_file
 
 logger = logging.getLogger(__name__)
 
@@ -53,10 +53,10 @@ async def generate_single_thumbnail(thumbnail_id: str, prompt: str, headshot_url
             job_id = thumb.job_id
 
         # upload this image to imagekit and get the url
-        url = upload_image(
+        url = upload_file(
             file_bytes=image_byte,
             file_name=f"{thumbnail_id}.png",
-            folder_path=f"thumbnails/{job_id}/",
+            folder=f"thumbnails/{job_id}/",
         )
           
         # db call to save url and marked uploaded
